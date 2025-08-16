@@ -90,3 +90,28 @@ function spawnFloaters(){
       direction:'alternate', easing:'easeInOutSine', duration:dur, loop:true, delay:Math.random()*800 });
   }
 }
+async function loadRedditPosts() {
+  try {
+    const response = await fetch("https://www.reddit.com/r/teenindia.json");
+    const data = await response.json();
+
+    const container = document.getElementById("posts");
+    container.innerHTML = "";
+
+    data.data.children.slice(0, 10).forEach(post => {
+      const p = post.data;
+      const div = document.createElement("div");
+      div.className = "post";
+
+      div.innerHTML = `
+        <h3><a href="https://reddit.com${p.permalink}" target="_blank">${p.title}</a></h3>
+        <p>👍 ${p.ups} | 💬 ${p.num_comments}</p>
+      `;
+      container.appendChild(div);
+    });
+  } catch (e) {
+    console.error("Error loading reddit:", e);
+  }
+}
+
+window.onload = loadRedditPosts;
