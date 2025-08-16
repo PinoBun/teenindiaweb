@@ -56,3 +56,8 @@ function escapeHtml(str=''){
 }
 
 window.renderLiveModsChoice = renderLiveModsChoice;
+// run once on page load
+renderLiveModsChoice();
+
+// auto refresh every 5 minutes
+setInterval(() => renderLiveModsChoice(true), 5 * 60 * 1000);
