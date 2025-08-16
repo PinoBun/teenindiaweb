@@ -3,7 +3,7 @@ async function renderLiveModsChoice(isRefresh=false){
   const grid = document.getElementById('postsGrid');
   if(!isRefresh){ grid.innerHTML = ''; }
 
-  const url = 'https://www.reddit.com/r/TeenIndia/search.json?q=flair_name:%22Mod%27s%20Choice%22&restrict_sr=1&sort=new&limit=12';
+  const url = 'https://www.reddit.com/r/TeenIndia/search.json?q=flair_name:%22:gold_128:Mod%27s%20Choice%22&restrict_sr=1&sort=new&limit=12';
   try{
     const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
     const data = await res.json();
