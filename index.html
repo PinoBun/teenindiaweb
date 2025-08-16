@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TeenIndia — Official Hub</title>
+  <meta name="description" content="Official hub for r/TeenIndia. Links, rules, wiki, and a live feed of posts with the Mod’s Choice flair." />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand" aria-label="TeenIndia Home">
+        <img src="logo.png" alt="TeenIndia logo" class="logo-img" width="40" height="40" />
+        <!-- Crisp wordmark in SVG -->
+        <svg class="wordmark" viewBox="0 0 420 60" role="img" aria-label="TeenIndia wordmark">
+          <defs>
+            <linearGradient id="tiTri" x1="0" x2="1">
+              <stop offset="0%" stop-color="#FF9933"/>
+              <stop offset="50%" stop-color="#FFFFFF"/>
+              <stop offset="100%" stop-color="#138808"/>
+            </linearGradient>
+          </defs>
+          <text x="0" y="42" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-weight="900" font-size="42" fill="currentColor">TeenIndia</text>
+          <rect x="2" y="46" width="170" height="6" rx="3" fill="url(#tiTri)" />
+        </svg>
+      </a>
+      <nav class="nav">
+        <a href="#links" class="nav-link">Links</a>
+        <a href="#mods-choice" class="nav-link">Mod’s Choice</a>
+        <a href="#about" class="nav-link">About</a>
+        <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">🌗</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div id="floaters" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <h1 class="hero-title split" data-split>r/TeenIndia — Official Hub</h1>
+        <p class="hero-subtitle">Quick links, rules & wiki, and a live feed of posts with the <strong>Mod’s Choice</strong> flair.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://www.reddit.com/r/TeenIndia" target="_blank" rel="noopener">Visit the Subreddit</a>
+          <button class="btn outline" id="replay">Replay intro</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="links" class="section alt">
+      <div class="container">
+        <h2 class="section-title reveal">Official Links</h2>
+        <div class="links-grid">
+          <a class="link-card reveal" href="https://discord.gg/adultindia-1002231206521356398" target="_blank" rel="noopener">Discord <small>Join chat</small></a>
+          <a class="link-card reveal" href="https://www.instagram.com/rteenindia/" target="_blank" rel="noopener">Instagram <small>@rteenindia</small></a>
+          <a class="link-card reveal" href="https://www.youtube.com/@teenindiareddit" target="_blank" rel="noopener">YouTube <small>@teenindiareddit</small></a>
+          <a class="link-card reveal" href="https://www.reddit.com/r/TeenIndia" target="_blank" rel="noopener">Reddit <small>/r/TeenIndia</small></a>
+          <a class="link-card reveal" href="https://www.reddit.com/r/TeenIndia/s/Whp3IiCnmx" target="_blank" rel="noopener">Reddit Chat <small>Invite</small></a>
+          <a class="link-card reveal" href="https://www.reddit.com/r/TeenIndia/s/gCxGomsPWo" target="_blank" rel="noopener">Wiki <small>Sub wiki</small></a>
+          <a class="link-card reveal" href="https://www.reddit.com/r/TeenIndia/wiki/rules" target="_blank" rel="noopener">Rules <small>Read first</small></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mods-choice" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Mod’s Choice — Live</h2>
+        <p class="section-lead reveal">Fresh posts tagged with <em>Mod’s Choice</em>. Auto-updates every 5 minutes.</p>
+        <div class="grid posts-grid" id="postsGrid"></div>
+        <div class="center mt">
+          <a class="btn outline" href="https://www.reddit.com/r/TeenIndia/search/?q=flair_name%3A%22Mod%27s%20Choice%22&restrict_sr=1&sort=new" target="_blank" rel="noopener">See all on Reddit</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container">
+        <h2 class="section-title reveal">About</h2>
+        <div class="about-grid">
+          <div class="card reveal">
+            <h3>Community</h3>
+            <p>r/TeenIndia is a space for Indian teens to hang out, share stories, and help each other.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Safety</h3>
+            <p>Be kind, no harassment, and follow Reddit TOS + sub rules.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Contact Mods</h3>
+            <p>Use subreddit Modmail. This site is static—no personal data is stored.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made with ❤️ for the TeenIndia community. Built with <a href="https://animejs.com" target="_blank" rel="noopener">Anime.js</a>.</p>
+    </div>
+  </footer>
+  <script defer src="posts.js"></script>
+</body>
+</html>
